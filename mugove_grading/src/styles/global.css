@@ -1,0 +1,30 @@
+
+@font-face {
+    font-family: "StolzlLight";
+    src: url("../fonts/StolzlLight.ttf");
+  }
+
+  @font-face {
+    font-family: "StolzlBook";
+    src: url("../fonts/StolzlBook.ttf");
+  }
+  
+  @font-face {
+    font-family: "StolzlBold";
+    /* src: local('StolzlBold'), url(../fonts/StolzlBold.ttf) format('truetype');
+     */
+     src: url("../fonts/StolzlBold.ttf");
+
+  }
+
+  @font-face {
+    font-family: "StolzlMedium";
+    src: url("../fonts/StolzlMedium.ttf");
+  }
+
+
+  
+  @font-face {
+    font-family: "StolzlRegular";
+    src: url("../fonts/StolzlRegular.ttf");
+  }
