@@ -1,0 +1,83 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/panashe/workplace/react/dotnet_app1/dotnet_app1.csproj": {}
+  },
+  "projects": {
+    "/Users/panashe/workplace/react/dotnet_app1/dotnet_app1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/panashe/workplace/react/dotnet_app1/dotnet_app1.csproj",
+        "projectName": "dotnet_app1",
+        "projectPath": "/Users/panashe/workplace/react/dotnet_app1/dotnet_app1.csproj",
+        "packagesPath": "/Users/panashe/.nuget/packages/",
+        "outputPath": "/Users/panashe/workplace/react/dotnet_app1/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/panashe/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.35, 6.0.35]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-x64",
+              "version": "[6.0.35, 6.0.35]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.35, 6.0.35]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
