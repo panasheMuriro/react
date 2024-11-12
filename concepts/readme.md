@@ -10,3 +10,8 @@
 
 `useMemo`: Memoizes a computed value, recalculating it only when dependencies change. Useful for expensive calculations that don’t need to rerun on every render.
 
+
+### screenshots
+
+<img width="1122" alt="image" src="https://github.com/user-attachments/assets/105ca4da-deed-4efc-8109-666da4e5c98c">
+
