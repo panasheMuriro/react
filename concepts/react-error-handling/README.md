@@ -1,8 +1,9 @@
-# React + Vite
+# Error Boundaries and Error Handling in React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Objective:
+Understand how to handle JavaScript errors in your React application by implementing Error Boundaries and improving user experience with graceful error recovery.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What You'll Learn:
+- How to create and use an Error Boundary.
+- Which errors Error Boundaries can and cannot catch.
+- How to combine Error Boundaries with React features like Suspense.
