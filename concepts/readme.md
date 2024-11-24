@@ -25,13 +25,12 @@
 ### Checklist
 remaining
 
-
-- Forms
-- Styled Components
+- TailwindCSS responsive
 - SSR
 - GraphQL
 - PWA
 - Docker
 - Webpack
 - Architecture
+- react testing
 
