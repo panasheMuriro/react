@@ -20,3 +20,18 @@
 
 <img width="1122" alt="image" src="https://github.com/user-attachments/assets/105ca4da-deed-4efc-8109-666da4e5c98c">
 
+
+
+### Checklist
+remaining
+
+
+- Forms
+- Styled Components
+- SSR
+- GraphQL
+- PWA
+- Docker
+- Webpack
+- Architecture
+
