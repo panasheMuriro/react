@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 import { darkTheme, GlobalStyle, lightTheme } from "./styles/themes";
 import ThemeToggle from "./components/ThemeToggle";
 import Card from "./components/Card";
-;
+
 
 function App() {
   const [theme, setTheme] = useState("light");

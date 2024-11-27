@@ -26,9 +26,9 @@
 remaining
 
 - TailwindCSS responsive
+- PWA
 - SSR
 - GraphQL
-- PWA
 - Docker
 - Webpack
 - Architecture
