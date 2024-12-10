@@ -11,21 +11,22 @@
     pages/index.js as the default homepage
 3. Routing in Next.js
 
-    - File-based routing
-    - Dynamic routes (e.g., [id].js)
-    - Nested routes
-    - Catch-all routes ([...slug].js)
+    - ✅ File-based routing
+    - ✅ Dynamic routes (e.g., [id].js)
+    - ✅ Nested routes
+    - ✅ Catch-all routes ([...slug].js)
 4. Static and Dynamic Rendering
 
-    - Static Site Generation (SSG)
-    - Server-Side Rendering (SSR)
-    - Client-Side Rendering (CSR)
-    - Understanding the differences and use cases
+    - ✅ Static Site Generation (SSG)
+    - ✅ Server-Side Rendering (SSR)
+    - ✅ Client-Side Rendering (CSR)
+    - ✅ Incremental Static Regeneration (ISR)
+    - ✅ Understanding the differences and use cases
 5. API Routes
 
-Creating API endpoints with pages/api/
-Basic API handling (GET, POST, etc.)
-Using API routes for server-side logic
+    - Creating API endpoints with pages/api/
+    - Basic API handling (GET, POST, etc.)
+    - Using API routes for server-side logic
 CSS in Next.js
 
 Global CSS with styles/global.css
