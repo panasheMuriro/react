@@ -13,8 +13,11 @@ const LoginPage = () => {
     e.preventDefault();
     try {
       const { data } = await login(email, password);
-      localStorage.setItem('accessToken', data.accessToken);
+      console.log(data)
+      
+      localStorage.setItem('accessToken', data.accessToken.access_token);
       setUser(data.user);
+      console.log(data.user,  data.accessToken);
       navigate('/logged-in'); // Redirect to the logged-in page
     } catch (error) {
       console.error('Login failed', error);

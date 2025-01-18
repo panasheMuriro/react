@@ -33,7 +33,10 @@ export class AuthController {
     if (!user) {
       throw new Error('Invalid credentials');
     }
-    return this.authService.login(user);
+    return {
+      accessToken: this.authService.login(user),
+      user: { email: user.email },
+    };
   }
 
   @Post('logout')

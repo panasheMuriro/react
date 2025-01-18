@@ -13,8 +13,11 @@ const SignupPage = () => {
     e.preventDefault();
     try {
       const { data } = await register(email, password);
-      localStorage.setItem('accessToken', data.accessToken);
+      localStorage.setItem('accessToken', data.accessToken.access_token);
       setUser(data.user);
+      console.log(data.user,data.accessToken);
+      console.log(localStorage.getItem('accessToken'))
+
       navigate('/logged-in'); // Redirect to the logged-in page
     } catch (error) {
       console.error('Signup failed', error);
@@ -40,8 +43,7 @@ const SignupPage = () => {
       />
       <button type="submit">Signup</button>
     </form>
-    <br></br>
-    <>Have an account already?<button onClick={()=> navigate("/login")} >Login</button></>
+  
     </>
   );
 };

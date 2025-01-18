@@ -14,22 +14,26 @@ export const AuthProvider = ({ children }) => {
   // };
 
   const loadUserFromToken = () => {
-    const token = localStorage.getItem('accessToken');
-    if (token) {
-      try {
-        const base64Payload = token.split('.')[1]; // JWT payload is in the second part
-        const decodedPayload = JSON.parse(atob(base64Payload)); // Decode base64 payload
-        setUser(decodedPayload);
-      } catch (error) {
-        console.error('Invalid token:', error);
-        // Clear invalid token from localStorage
-        localStorage.removeItem('accessToken');
-      }
+  const token = localStorage.getItem('accessToken');
+
+
+  console.log(token);
+
+  if (token) {
+    try {
+      // const base64Payload = token.split('.')[1]; // JWT payload is in the second part
+      // const decodedPayload = JSON.parse(atob(base64Payload)); // Decode base64 payload
+      setUser({email: "example@gmail.com"});
+    } catch (error) {
+      console.error('Invalid token:', error);
+      // Clear invalid token from localStorage
+      localStorage.removeItem('accessToken');
     }
-  };
+  }
+};
 
   const logout = () => {
-    localStorage.removeItem('accessToken');
+    // localStorage.removeItem('accessToken');
     setUser(null);
   };
 
