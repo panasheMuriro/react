@@ -1,39 +1,26 @@
-import { createContext, useState, useEffect } from 'react';
+import { createContext, useState, useEffect } from "react";
+import {jwtDecode} from "jwt-decode";
+
 export const AuthContext = createContext();
+
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
-  // const loadUserFromToken = () => {
-  //   const token = localStorage.getItem('accessToken');
-  //   console.log(token)
-
-  //   if (token) {
-  //     const userData = JSON.parse(atob(token.split('.')[1])); // Decode JWT payload
-  //     setUser(userData);
-  //   }
-  // };
-
   const loadUserFromToken = () => {
-  const token = localStorage.getItem('accessToken');
-
-
-  console.log(token);
-
-  if (token) {
-    try {
-      // const base64Payload = token.split('.')[1]; // JWT payload is in the second part
-      // const decodedPayload = JSON.parse(atob(base64Payload)); // Decode base64 payload
-      setUser({email: "example@gmail.com"});
-    } catch (error) {
-      console.error('Invalid token:', error);
-      // Clear invalid token from localStorage
-      localStorage.removeItem('accessToken');
+    const token = localStorage.getItem("accessToken");
+    if (token) {
+      try {
+        const user = jwtDecode(token);
+        setUser(user);
+      } catch (error) {
+        console.error("Invalid token:", error);
+        localStorage.removeItem('accessToken');
+      }
     }
-  }
-};
+  };
 
   const logout = () => {
-    // localStorage.removeItem('accessToken');
+    localStorage.removeItem('accessToken');
     setUser(null);
   };
 
