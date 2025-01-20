@@ -1,26 +1,33 @@
-import { useState, useContext } from 'react';
-import { login } from '../api/authApi';
-import { AuthContext } from '../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
+import { useState, useContext, useEffect } from "react";
+import { login } from "../api/authApi";
+import { AuthContext } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const { setUser } = useContext(AuthContext);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { setUser, user } = useContext(AuthContext);
   const navigate = useNavigate();
+
+  // if user is logged in,
+
+  useEffect(() => {
+    if (user) {
+      navigate("/logged-in");
+    }
+  }, [user]);
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
       const { data } = await login(email, password);
-      console.log(data)
-      
-      localStorage.setItem('accessToken', data.accessToken.access_token);
+      localStorage.setItem("accessToken", data.accessToken.access_token);
+
+      console.log(data, data.accessToken, data.accessToken.access_token);
       setUser(data.user);
-      console.log(data.user,  data.accessToken);
-      navigate('/logged-in'); // Redirect to the logged-in page
+      navigate("/logged-in"); // Redirect to the logged-in page
     } catch (error) {
-      console.error('Login failed', error);
+      console.error("Login failed", error);
     }
   };
 

@@ -16,7 +16,7 @@ const SignupPage = () => {
       localStorage.setItem('accessToken', data.accessToken.access_token);
       setUser(data.user);
       console.log(data.user,data.accessToken);
-      console.log(localStorage.getItem('accessToken'))
+      console.log("Token stored is: ", localStorage.getItem('accessToken'))
 
       navigate('/logged-in'); // Redirect to the logged-in page
     } catch (error) {
