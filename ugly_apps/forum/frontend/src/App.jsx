@@ -4,6 +4,7 @@ import LoginPage from './pages/LoginPage';
 // import LoggedInPage from './pages/LoggedInPage';
 import HomePage from './pages/HomePage';
 import SignupPage from './pages/Signup';
+import CreatePost from './pages/CreatePost';
 
 // const ProtectedRoute = ({ children }) => {
 //   const { user } = React.useContext(AuthContext);
@@ -23,6 +24,8 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
+          <Route path="/create-post" element={<CreatePost />} />
+          
           {/* <Route
             path="/logged-in"
             element={
