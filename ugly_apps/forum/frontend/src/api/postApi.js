@@ -6,8 +6,23 @@ import httpClient from './httpClient';
 //     "userId": 1
 // }
 
-export const create = async (title, content, userID) => {
-  return httpClient.post('/posts/create', { title, content, userID });
+export const createPost = async (title, content, userId) => {
+  return httpClient.post('/posts/create', { title, content, userId });
 };
 
 
+export const getPosts = async() => {
+    return httpClient.get('/posts');
+}
+
+export const getPostById = async(postId) => {
+  return httpClient.get(`/posts/${postId}`);
+}
+
+
+
+export const createComment = async (postId, content, userId) => {
+  // /comments/create/:postId
+  return httpClient.post(`/comments/create/${postId}`, {userId, content, postId});
+
+}

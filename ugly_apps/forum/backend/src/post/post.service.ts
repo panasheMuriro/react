@@ -24,13 +24,18 @@ export class PostService {
       throw new Error('User not found');
     }
 
-    const post = this.postRepository.create({ title, content, userId });
+    const post = this.postRepository.create({
+      title,
+      content,
+      userId,
+      dateCreated: new Date(),
+    });
     return await this.postRepository.save(post);
   }
 
   // Get all posts with their comments and associated user
   async getPosts(): Promise<Post[]> {
-    return this.postRepository.find({ relations: ['comments', 'user'] });
+    return this.postRepository.find({ relations: ['user'] });
   }
 
   // Get a specific post by ID with its comments and associated user

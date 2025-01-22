@@ -27,9 +27,13 @@ export class AuthController {
     if (!user) {
       throw new Error('Invalid credentials');
     }
-    const payload = { email: user.email, sub: user.id };
+    const payload = { email: user.email, id: user.id };
     const accessToken = await this.authService.login(payload);
-    return { accessToken };
+
+    return {
+      accessToken,
+      user: { email: user.email, id: user.id },
+    };
   }
 
   @Post('logout')

@@ -20,6 +20,9 @@ export class Post {
   @Column()
   content: string;
 
+  @Column()
+  dateCreated: Date;
+
   @Column({ default: 0 })
   commentCount: number; // Track number of comments
 

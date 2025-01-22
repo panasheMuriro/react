@@ -18,7 +18,7 @@ const SignupPage = () => {
       console.log(data.user,data.accessToken);
       console.log("Token stored is: ", localStorage.getItem('accessToken'))
 
-      navigate('/logged-in'); // Redirect to the logged-in page
+      navigate('/'); // Redirect to the logged-in page
     } catch (error) {
       console.error('Signup failed', error);
     }

@@ -11,19 +11,18 @@ const LoginPage = () => {
 
   // if user is logged in,
 
-  // useEffect(() => {
-  //   if (user) {
-  //     navigate("/logged-in");
-  //   }
-  // }, [user]);
+  useEffect(() => {
+    if (user) {
+      console.log(user)
+      navigate("/");
+    }
+  }, [user]);
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
       const { data } = await login(email, password);
-      localStorage.setItem("accessToken", data.accessToken.access_token);
-
-      console.log(data, data.accessToken, data.accessToken.access_token);
+      localStorage.setItem("accessToken", data.accessToken.accessToken); 
       setUser(data.user);
       // navigate("/logged-in"); // Redirect to the logged-in page
     } catch (error) {
