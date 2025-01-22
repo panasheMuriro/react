@@ -9,11 +9,8 @@ const LoginPage = () => {
   const { setUser, user } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  // if user is logged in,
-
   useEffect(() => {
     if (user) {
-      console.log(user)
       navigate("/");
     }
   }, [user]);
@@ -24,7 +21,6 @@ const LoginPage = () => {
       const { data } = await login(email, password);
       localStorage.setItem("accessToken", data.accessToken.accessToken); 
       setUser(data.user);
-      // navigate("/logged-in"); // Redirect to the logged-in page
     } catch (error) {
       console.error("Login failed", error);
     }

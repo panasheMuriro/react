@@ -1,11 +1,9 @@
-// import { useEffect } from "react";
 import { useEffect } from "react";
 import { getPosts } from "../api/postApi";
 import { useState } from "react";
-import moment from 'moment'
+import moment from "moment";
 
 export default function PostList() {
-  //   let posts = await getPosts();
   const [posts, setPosts] = useState();
   useEffect(() => {
     getPosts().then((res) => {
@@ -13,7 +11,6 @@ export default function PostList() {
     });
   }, []);
 
-  //   console.log(posts);
   return (
     <div>
       {posts &&
@@ -22,9 +19,11 @@ export default function PostList() {
             <hr></hr>
             <b>{post.title}</b>
             <p>{post.content}</p>
-            <p>by {post.user.email}, {moment(post.dateCreated).fromNow()}</p>
+            <p>
+              by {post.user.email}, {moment(post.dateCreated).fromNow()}
+            </p>
 
-            <a href={"/post/"+post.id}>Comments: {post.commentCount}</a>
+            <a href={"/post/" + post.id}>Comments: {post.commentCount}</a>
           </div>
         ))}
     </div>

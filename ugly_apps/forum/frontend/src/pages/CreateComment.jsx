@@ -1,13 +1,12 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
-import { createComment, createPost, getPostById } from "../api/postApi";
+import { createComment, getPostById } from "../api/postApi";
 import { useNavigate, useParams } from "react-router-dom";
 
 function CreateComment() {
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
   const { postId } = useParams();
-//   console.log("Post id is ", postId);
   const [post, setPost] = useState();
 
   useEffect(() => {
@@ -28,22 +27,15 @@ function CreateComment() {
 
     const form = document.getElementById("comment-form");
     const formData = new FormData(form); // Gather form data
-    // let commentTitle = formData.get("comment-title");
     let commentContent = formData.get("comment-content");
 
     let data = {
-      //   title: commentTitle,
       content: commentContent,
       userId: user.user_id || 1,
       postId: postId || 1,
     };
 
-    let res = await createComment(
-      data.postId,
-      //   data.title,
-      data.content,
-      data.userId
-    );
+    let res = await createComment(data.postId, data.content, data.userId);
     if (res && res.status) {
       alert("Comment posted successfully");
       navigate(-1);
