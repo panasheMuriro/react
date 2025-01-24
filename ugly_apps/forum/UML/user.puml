@@ -1,0 +1,9 @@
+@startuml
+interface User{
+    id: Integer
+    email: String
+    password: String
+    posts: String[]
+    comments: String[]
+}
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+
+interface Post{
+    id: Integer
+    userId: Integer
+    title: String
+    content:String
+    dateCreated: Date
+    commentCount: Integer
+    comments: Comment[]
+}
+@enduml
