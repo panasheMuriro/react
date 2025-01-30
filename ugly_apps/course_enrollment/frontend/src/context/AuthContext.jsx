@@ -11,7 +11,6 @@ export const AuthProvider = ({ children }) => {
       try {
         const user = jwtDecode(token);
         setUser(user);
-        console.log(user)
       } catch (error) {
         console.error("Invalid token:", error);
         localStorage.removeItem('accessToken');
